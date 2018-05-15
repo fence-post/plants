@@ -1,0 +1,24 @@
+﻿@model PlantsByAttributeViewModel
+@{
+    Layout = null;
+}
+@if (Model != null)
+{
+    foreach (PlantsByAttribute type in Model.attributes)
+    {
+        <h2>@type.attributeName</h2>
+        <hr />
+        <div class="attributeSection">
+            @foreach (PlantSummary summary in type.plantSummaries)
+            {
+                <div class="plantSummary">
+                    <div class="plantSummaryImage">
+                        <a asp-area="" asp-controller="Home" asp-route-id="@(summary.id)" asp-action="Plant"><img src="~/plantImages/@(summary.image)" /></a>
+                    </div>
+                    <div class="plantSummaryName">
+                        <a asp-area="" asp-controller="Home" asp-route-id="@(summary.id)" asp-action="Plant">@summary.commonName</a></div>
+                </div>
+            }
+        </div>
+    }
+}

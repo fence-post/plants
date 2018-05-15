@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Plants</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="background-color:#aa9439;">
+    <div id="header">
+        <div id="logoFrame">
+            <a asp-area="" asp-controller="Home" asp-action="Index"><img id="logo" src="~/images/logo5.png" /></a>
+        </div>
+        <div id="menu">
+            <div class="menuItem"><a asp-area="" asp-controller="Home" asp-action="PlantsByType">Plants by Type</a></div>
+            <div class="menuItem"><a asp-area="" asp-controller="Home" asp-action="PlantsByHabitat">Plants by Habitat</a></div>
+            <div class="menuItem"><a asp-area="" asp-controller="Home" asp-action="PlantsBySoilPreference">Plants by Soil Preference</a></div>
+            <div class="menuItem"><a asp-area="" asp-controller="Home" asp-action="PlantsByShadePreference">Plants by Shade Preference</a></div>
+            <div class="menuItem"><a asp-area="" asp-controller="Home" asp-action="PlantsByUse">Plants by Special Use</a></div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div id="plantsContent">
+            @RenderBody()
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; 2018 - Plants</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

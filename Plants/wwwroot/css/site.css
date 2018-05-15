@@ -1,0 +1,237 @@
+﻿@font-face {
+    font-family: headingFont;
+    src: url(../fonts/OSTRICHSANS-BLACK.OTF);
+}
+
+@font-face {
+    font-family: lightFont;
+    src: url(../fonts/POPPINS-LIGHT.TTF);
+}
+
+@font-face {
+    font-family: boldFont;
+    src: url(../fonts/POPPINS-BOLD.TTF);
+}
+
+body {
+    font-family: lightFont;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+body, h1, h2, h3, h4, div, td {
+    color: #ffeeaa;
+}
+
+a {
+    color: #806B16;
+    font-weight: bold;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+div.plantSummary {
+	text-align:center;
+	width:170px;
+	margin:5px;
+}
+
+div.plantSummary img {
+	height: 170px;
+	width: 170px;
+	margin-left:auto;
+	margin-right:auto;
+	object-fit: cover;
+}
+
+div.attributeSection {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom:50px;
+}
+
+h1,h2,h3,h4 {
+	text-align:center;
+}
+
+table#plantDetails {
+}
+
+    table#plantDetails th {
+        width: 125px;
+        text-align: right;
+        padding:10px;
+        background-color:gray;
+    }
+
+    table#plantDetails td {
+        text-align: left;
+        vertical-align: top;
+        padding:10px;
+    }
+
+
+div#plantsContent
+{
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#header {
+    
+}
+
+#logoFrame {
+    text-align:center;
+    margin-bottom:30px;
+}
+#menu {
+    text-align: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.menuItem {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 19px;
+}
+
+.menuItem a {
+    text-decoration: none;
+}
+.menuItem a:hover {
+    text-decoration: underline;
+}
+#logo{
+    height:70px;
+}
+
+#plantFrame{
+    display:flex;
+}
+
+#bigImgFrame {
+    width: 300px;
+    height: 300px;
+    border: 2px solid gray;
+    margin-bottom:5px;
+}
+
+    #bigImgFrame img {
+        object-fit: contain;
+    }
+
+#leftFrame {
+    margin-right: 30px;
+    margin-top: 100px;
+}
+
+#map {
+    width: 300px;
+    border: 2px solid gray;
+    height: 500px;
+}
+#plantImages {
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+#plantInfo {
+    width:400px;
+}
+
+.bigImgFrame {
+    width: 200px;
+    border: 2px solid gray;
+    margin-bottom:5px;
+    height: 200px;
+}
+.bigImg {
+    width: 200px;
+    height: 200px;
+}
+#bigImage {
+    width: 300px;
+    border: 2px solid gray;
+    height: 300px;
+}
+
+#smallImages {
+    display: flex;
+    flex-wrap: wrap;
+}
+.smallImage {
+    width: 96px;
+    border: 2px solid gray;
+    border-top: 0;
+    height: 100px;
+}
+
+    .smallImage img {
+        object-fit: cover;
+        width: 96px;
+        height: 100px;
+    }
+
+.narrowBigImgFrame {
+    width: 300px;
+    margin-left:auto;
+    margin-right:auto;
+    border: 2px solid gray;
+    margin-top:5px;
+    height: 300px;
+}
+
+.narrow
+{
+    display:none;
+}
+
+@media only screen and (max-width: 890px) {
+    .narrow {
+        display: block;
+    }
+    .wide {
+        display: none;
+    }
+    #plantInfo{
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
